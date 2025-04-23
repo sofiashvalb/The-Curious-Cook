@@ -1,0 +1,49 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        This easy-to-make ice cream recipe is a delicious and easy way to satisfy your sweet tooth without an ice cream maker.  
+        What's your favorite ice cream flavor? Don't be afraid to improvise.🍓🍫
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+
+    <p><b>For the Ice Cream:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍶 16.9 fl oz (500ml) double cream (or heavy cream) - Chill before whipping</li>
+        <li>🥛 1 can (397g / 14oz) condensed milk</li>
+        <li>🍦 Your favorite flavorings (vanilla, chocolate, nuts, etc.)</li>
+    </ul>
+    <hr>
+
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 20px; list-style-type: none;">
+            <li>⏱️ Want it faster? Freeze a smaller amount of ice cream in a smaller container for quicker results.</li>
+            <li>🎨 Experiment with flavors: Create your own unique ice cream combinations (chocolate chips, nuts, berries, etc.)!</li>
+        </ul>
+        <hr>
+
+        <h5><b>Let's Do This:</b></h5>
+        <!-- Custom spacing between list items in instructions -->
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;"><input type="checkbox"> 🥄 Beat the double cream and condensed milk together until the mixture is thick, smooth, and well combined. 
+                <br><small style="color:gray;">16.9 fl oz (500ml) double cream, 1 can (397g / 14oz) condensed milk</small>
+            </li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> 🍫 Add your favorite flavorings or mix-ins (like chocolate chips, vanilla extract, or fruit) and gently fold them in to keep the texture light. 
+            </li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> ❄️ Transfer the mixture into a container, cover, and freeze for a minimum of 6 hours, or until it's firm and scoopable. 
+                <br><small style="color:gray;">Use a container with a capacity of at least 1 liter</small>
+            </li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> 🍦 Scoop out the ice cream, drizzle with chocolate sauce or your topping of choice, and enjoy a creamy, homemade treat! 
+                <br><small style="color:gray;">Toppings: as desired (chocolate sauce, caramel, sprinkles)</small>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Ice Cream" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

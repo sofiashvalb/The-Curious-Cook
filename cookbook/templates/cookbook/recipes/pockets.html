@@ -1,0 +1,72 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+                <p class="text-body-secondary">
+                        These easy-to-make pockets are the perfect appetizer or snack for any celebration! Fill them with your favorite sweet or savory fillings and bake until golden. Ready in no time, and totally irresistible! 😍
+                </p>
+                <h4><b>Ingredients:</b></h4>
+
+                <p><b>Dough:</b></p>
+                <ul style="padding-left: 20px; list-style-type: none;">
+                        <li>🍞 2 cups all-purpose or whole wheat flour</li>
+                        <li>🌱 1/2 cup oil</li>
+                        <li>🥄 1/2 tsp baking powder</li>
+                        <li>💧 1/2 cup boiling water</li>
+                        <li>🧂 1 tsp salt (or 1.5 tbsp sugar for a sweet version)</li>
+                </ul>
+
+                <p><b>On top:</b></p>
+                <ul style="padding-left: 20px; list-style-type: none;">
+                        <li>🥚 1 beaten egg (or olive oil for a vegan option)</li>
+                        <li>🌱 Sesame seeds (white & black)</li>
+                </ul>
+
+                <hr>
+
+                <div class="row">
+                        <h5><b>Tips & Suggestions:</b></h5>
+                        <ul style="padding-left: 50px; list-style-type: none;">
+                            <li>💡 Roll the dough thin but not too thin, so it doesn't tear. And be careful not to overstuff the pockets.</li>
+                            <li>💡 The possibilities are endless! Have fun creating your own unique filling. I would love to hear about it!</li>
+                        </ul>
+                        <hr>
+
+                        <h5 id="fillings"><b>Filling Ideas:</b></h5>
+                        <ul style="padding-left: 50px; list-style-type: none;">
+                            <li>🧀 <b>Cheese & Spinach:</b> A classic combo—mix spinach with feta or ricotta.</li>
+                            <li>🍖 <b>Minced Meat:</b> Beef, lamb, or chicken—seasoned to your taste.</li>
+                            <li>🍕 <b>Pizza Style:</b> Tomato sauce, mozzarella, and your favorite pizza toppings!</li>
+                            <li>🥧 <b>Apple & Cinnamon:</b> Sweet, spiced, and comforting for a dessert-style pocket.</li>
+                            <li>🍯 <b>Nutella:</b> For a chocolatey treat in every bite.</li>
+                        </ul>
+    
+                        <hr>
+
+                        <h5><b>Let's Do This:</b></h5>
+                        <ul style="padding-left: 50px; list-style-type: none;">
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> <b>Dough Time:</b> Mix the dough ingredients until smooth. Divide into 2-3 pieces, roll and cut out circles. 
+                                    <br><small style="color:gray;">2 cups flour, 1/2 cup oil, 1/2 tsp baking powder, 1/2 cup boiling water,1 tsp salt or 1.5 tbsp sugar. </small>
+                                </li>                     
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> <b>Fill 'Em Up:</b> Add a spoonful of your fave filling to the center of each circle. (<a href="#fillings" style="text-decoration: none;">Ideas above</a>)
+                                </li>
+                                
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> <b>Seal & Sprinkle:</b> Fold and press with a fork to seal. Place on a baking sheet, brush with egg (or olive oil), and top with sesame seeds. 🌾
+                                </li>                   
+                            
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> <b>Bake & Enjoy:</b> Bake at 175°C (350°F) for 20-30 minutes until golden and crispy. Let them cool and serve! 😍✨
+                                </li>
+                            </ul>
+                            
+                </div>
+    {% endblock %}
+
+    {% block image %}
+
+                <img src="{{ card.image }}" alt="Dough Pockets" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+    {% endblock %}

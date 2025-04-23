@@ -1,0 +1,59 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        Shrimp, garlic, butter… all the essentials for a flavor-packed dish. Add some wine and cream, and it’s a game-changer. 
+        Pair with crispy bread, and you’ve got the perfect bite. <br>Who’s ready to make their taste buds dance? ✨
+    </p>
+
+
+    <h4><b>Ingredients:</b></h4>
+    <p><b>For the Shrimp:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍤 16oz (450g) uncooked shrimp</li>
+        <li>🧄 4-5 cloves garlic, minced</li>
+        <li>🧂 Salt & black pepper to taste</li>
+        <li>🌶️ Paprika (optional, for that extra kick)</li>
+    </ul>
+
+    <p><b>For the Sauce:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🧈 1 stick of butter</li>
+        <li>🍷 1 glass of white wine (optional but delicious!)</li>
+        <li>🍶 1 cup (250ml) heavy cream</li>
+        <li>🌿 Fresh basil, chives, or dill (your pick!)</li>
+    </ul>
+
+    <p><b>For Serving:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍞 Your fave bread (think crusty, like Georgian bread, focaccia, or rustic bread)</li>
+    </ul>
+    <hr>
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 20px; list-style-type: none;">
+            <li>💡 If using pre-cooked shrimp, just add it to the sauce at the end and warm it through!</li>
+            <li>💡 I love serving it straight from the pan. If you prefer plating, warm the plate in the microwave first to keep the dish from cooling too quickly.</li>
+        </ul>   
+        
+        <hr>
+        
+        <h5><b>Let's Do This:</b></h5>
+        <!-- Custom spacing between list items in instructions -->
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Sauté shrimp in a hot pan with salt, pepper, and paprika until they turn red. Set aside.</li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Melt butter, add minced garlic (don’t burn it!), and pour in wine if using. Let it cook off, then add cream. Season to taste.</li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Add shrimp back into the sauce and cook for another minute. Toss in your choice of herbs.</li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Pop your bread in the oven (180°C / 350°F) for 3-4 minutes to make it crispy.</li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Plate the shrimp, drizzle with sauce, and serve with the warm, crispy bread. Don’t forget to dip! 🤤</li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block image %}
+
+    <img src="{{ card.image }}" alt="Shrimp in Garlic Butter" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+
+ {% endblock %}

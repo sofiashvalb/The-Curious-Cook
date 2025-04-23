@@ -1,0 +1,76 @@
+{% extends "cookbook/layout.html" %}
+
+{% load i18n %}
+
+{% block body %}
+
+{% load static %}
+
+    <script>
+        // Function for the card click
+        function navigateToCard(cardId, cardLink) {
+            const newLink = cardLink + '?card_id=' + cardId;
+            window.location.href = newLink; 
+        }
+    </script>
+
+    <!-- About Me -->
+    <section class="text-center container">
+        <div class="row py-lg-1">
+            <div class="col-lg-8 col-md-8 mx-auto">
+                <h1 class="fw-light">
+                    {% trans "Welcome to" %}<span style="color: #7b7a79;">{% trans "The Curious Cook" %}</span>
+                </h1>
+
+                <p class="lead">
+                    {% blocktrans %} 
+                        Always experimenting with new flavors and adding a twist to classics. 
+                        <br>A space for sharing my culinary journey — and learning along the way.<br>
+                        Whether you're a seasoned chef or a curious beginner, feel free to 
+                    {% endblocktrans %}
+                    <button type="button" class="btn btn-white" style="border-radius: 50%;">
+                        <a href="{% url 'talk' %}" style="text-decoration: none;">
+                            <img class="heart" src="{% static 'cookbook/talk.jpg' %}" alt="tnx" width="30" height="auto">
+                        </a>            
+                    </button>
+                    <br>
+                    {% blocktrans %} 
+                        ideas or requests. Let's cook and discover together! 
+                    {% endblocktrans %}
+                </p>
+            </div>
+        </div>
+    </section>
+<hr>
+    <!-- Recipe Cards Section -->
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3"> 
+                {% for card in cards %}
+                    <a href="{% url 'recipe' card_id=card.id %}" class="card-link" style="text-decoration: none;"> 
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <div class="card-img-wrapper">
+                                    <img src="{{ card.image }}" alt="{{ card.title }}" class="card-img-top" style="object-fit: cover; width: 100%; height: 100%;">
+                                </div>
+                                
+                                <div class="card-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 10px;">
+                                    <h6 style="font-size: 14px; margin: 0;"><b>{{ card.title }}</b></h6>
+                                    <div class="d-flex justify-content-between align-items-center" style="overflow: hidden;">
+                                        <h6 class="text-body-secondary" style="margin-left: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 15px; font-family: fantasy, sans-serif;">
+                                            <b>{{ card.total_likes }}</b>
+                                            <img class="heart" src="{% static 'cookbook/fullHeart.jpg' %}" alt="tnx" 
+                                                style="max-width: 30px; max-height: 30px; vertical-align: middle; margin-left: 5px;">
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </a>
+                {% endfor %}
+            </div> 
+        </div>
+    </div>
+
+
+{% endblock %}

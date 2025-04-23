@@ -1,0 +1,46 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+            Dreamy, crispy chicken schnitzels oven baked? Yes, please!🔥 All the crunch, none of the oil—healthier and delicious! 
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+    <p><b>For the Chicken Schnitzels:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+            <li>🍗 2.2 lbs (1kg) chicken breast (cut into schnitzels)</li>
+            <li>🥚 1 egg</li>
+            <li>🍶 2 tbsp soy sauce</li>
+            <li>🥄 1 tbsp mustard</li>
+            <li>🧂 Salt & pepper (to taste)</li>
+            <li>🌶️ 1 tsp paprika</li>
+            <li>🌿 1 tsp dried oregano</li>
+            <li>🍞 1 cup <b>panko</b> breadcrumbs</li>
+            <li>🌾 Sesame seeds (optional)</li>
+    </ul>
+
+    <hr>
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 50px; list-style-type: none;">
+                <li style="margin-bottom: 20px;">🍽️ After coating the schnitzels, stack them in a container with parchment paper between each layer and freeze. This makes for an easy, quick meal prep for later—just bake when you're ready!</li>
+        </ul>
+        <hr>
+    </div>
+
+    <div class="row">
+        <h5><b>Let's Do This:</b></h5>
+            <ul style="padding-left: 50px; list-style-type: none;">
+                <li style="margin-bottom: 20px;"><input type="checkbox"> 🥄 Mix wet ingredients (egg, soy sauce, mustard, salt, pepper). In another bowl, combine panko, paprika, oregano, and sesame seeds. Dip schnitzels into the wet mix, then coat with the dry mix.</li>
+                <li style="margin-bottom: 20px;"><input type="checkbox"> 🔥 Preheat oven to 180°C (350°F). Spray rack with oil, then bake schnitzels for 10 minutes, flip, and bake for 2-3 more minutes.</li>
+                <li style="margin-bottom: 20px;"><input type="checkbox"> 🥳 Crispy on the outside, juicy on the inside—your dream schnitzel is ready!</li>
+            </ul>
+    </div>
+   
+{% endblock %}
+
+{% block image %}
+        <img src="{{ card.image}}" alt="Chicken Schnitzel" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+
+        <p class="text-body-secondary">
+                This vibrant, zesty sauce is all you need to take your meals to the next level! Perfect for grilled meats, veggies, or even as a dip. 🔥
+        </p>
+
+        <h4><b>Ingredients:</b></h4>
+        <ul style="padding-left: 20px; list-style-type: none;">
+                <li>🫑 1-2 red + yellow peppers</li>
+                <li>🧄 3 garlic cloves</li>
+                <li>🌿 1oz (30g) parsley</li>
+                <li>🌱 1oz (30g) coriander</li>
+                <li>🌶️ 1-2 chillis</li>
+                <li>🧂 1 tsp salt</li>
+                <li>🧂 1/2 tsp pepper</li>
+                <li>🫒 1/2 cup (100ml) olive oil</li>
+                <li>🍷 2 tbsp red wine vinegar</li>
+                <li>🌿 1 tsp oregano (optional)</li>
+        </ul>
+        <hr>
+
+        <div class="row">
+                <h5><b>Tips & Suggestions:</b></h5>
+                <ul style="padding-left: 20px; list-style-type: none;">
+                        <li>🔥 Want more heat? Add extra chillis for a fiery kick! </li>
+                        <li>🔪 Don't have a food processor? No problem, just chop everything finely by hand!</li>
+                </ul>
+                <hr>
+
+                <h5><b>Let's Do This:</b></h5>
+                <!-- Custom spacing between list items in instructions -->
+                <ul style="padding-left: 50px; list-style-type: none;">
+                        <li style="margin-bottom: 20px;"><input type="checkbox"> Finely chop or pulse all the ingredients in a food processor until well combined.
+                                <br><small style="color:gray;">peppers, garlic, parsley, coriander, chillis, 1 tsp salt, 1/2 tsp pepper, 1/2 cup (100ml) olive oil, 2 tbsp red wine vinegar, 1 tsp oregano (optional)</small>
+                        </li>
+                        <li style="margin-bottom: 20px;"><input type="checkbox"> Add everything to a bowl, stir, and let it sit for at least 10 minutes to allow those flavors to marry together.</li>
+                        <li style="margin-bottom: 20px;"><input type="checkbox"> Drizzle over your favorite dishes—grilled meat, roasted veggies, or just dip some warm bread in it. You won’t be disappointed! 😍</li>
+                </ul>
+        </div>
+{% endblock %}
+
+{% block image %}
+        <img src="{{ card.image }}" alt="Chimichurri Sauce" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        My version of tomato soup isn’t traditional, but trust me, it’s rich, vibrant, and totally worth the try! ✨ <br>
+        I like it light with croutons, but my husband prefers it with rice—he's all about that extra comfort! 🍲
+    </p>
+
+
+
+    <h4><b>Ingredients:</b></h4>
+    <p><b>Vegetables:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍅 4-5 ripe tomatoes</li>
+        <li>🧅 1 onion</li>
+        <li>🌿 2 celery stalks</li>
+        <li>🥕 1 carrot</li>
+        <li>🥒 1 zucchini</li>
+        <li>🌶️ 1 bell pepper</li>
+        <li>🧄 3-4 garlic cloves</li>
+    </ul>
+
+    <p><b>Herbs & Roots:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🌱 Fresh parsley, cilantro, and celery leaves (optional: parsley root, celery root)</li>
+        <li>🌶️ Fresh ginger (optional)</li>
+    </ul>
+
+    <p><b>Liquids & Seasonings:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍅 1 can of tomato paste</li>
+        <li>🧂 Salt & black pepper to taste</li>
+        <li>🍯 1 tbsp sugar (optional)</li>
+        <li>🍲 1 cup vegetable broth (optional but adds richness)</li>
+        <li>💧 3-4 cups water (adjust based on desired consistency)</li>
+    </ul>
+
+    <p><b>Optional Extras:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍞 Croutons</li>
+        <li>🍚 Rice</li>
+        <li>🥄 Sour cream</li>
+    </ul>
+    <hr>
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 20px; list-style-type: none;">
+            <li>✨ You can add/remove any vegetables you want. Every vegetable has it's own magic and flavor.</li>
+            <li>💡 For a lighter, flavorful soup, I like to add croutons and sour cream. If you want something heartier, try adding rice—just cook it separately and stir it in right before serving!</li>
+        </ul>   
+        
+        <hr>
+        
+        <h5><b>Let's Do This:</b></h5>
+        <!-- Custom spacing between list items in instructions -->
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;"><input type="checkbox"> In a pot, sauté onion, celery, carrot, and any root vegetables (if using) in a little oil. Once the veggies are tender, add minced garlic, bell pepper and zucchini. Stir for a minute, then toss in the chopped tomatoes.</li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Let the tomatoes break down, then add parsley, cilantro, and celery leaves. Season with salt, pepper, and sugar (optional).</li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Stir in the tomato paste, vegetable broth, and water. Cover, and let it simmer for about an hour on medium heat. Check occasionally to make sure there's enough liquid.</li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Once the veggies are soft and fragrant, blend with a blender until smooth (adjust consistency with water if needed).</li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Ladle into bowls and top with a spoonful of rice or croutons. You can add a spoon of sour cream. Enjoy the rich, savory flavors! 🍲🍞</li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block image %}
+
+    <img src="{{ card.image }}" alt="Tomato Soup" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+
+ {% endblock %}

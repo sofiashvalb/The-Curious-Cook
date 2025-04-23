@@ -1,0 +1,89 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        Made this Lemon Key Pie on a whim, and now I can't stop eating it.  
+        The tangy lime filling and buttery crust are the perfect combination. I'm definitely not sorry about it.
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+    <p><b>For the Crust:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍪 1 cup (125g) Graham crackers (or any biscuits you have)</li>
+        <li>🧈 6 tbsp (84g) melted butter</li>
+        <li>🍬 2 tbsp (30g) brown sugar</li>
+    </ul>
+
+    <p><b>For the Filling:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🥚 4 eggs</li>
+        <li>🍋 1/3 cup (80ml) fresh lime juice</li>
+        <li>🍋 Zest of 2 limes</li>
+        <li>🥛 1 can (375g) sweetened condensed milk</li>
+    </ul>
+
+    <p><b>For Decoration:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍦 1 cup (250ml) heavy cream (whipping cream)</li>
+        <li>🍰 1 package (80g) instant vanilla pudding mix</li>
+        <li>🍋 Lime zest (for topping)</li>
+        <li>🌰 Optional: Crushed pistachios or fresh raspberries for garnish</li>
+    </ul>
+    <hr>
+
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 20px; list-style-type: none;">
+                <li>✨ Can’t find limes? No worries, lemons are great too!</li>
+                <li>✨ Want a crunchy twist? Throw in some crushed pistachios in the crust with the biscuits.</li>
+                <li>✨ You can make the cream lighter by adding milk. No piping, but the spread is crazy delicious</li>
+        </ul>
+        <hr>
+
+        <h5><b>Let’s Do This:</b></h5>
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Preheat your oven to 175°C (350°F).
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Crush crackers, mix with melted butter and brown sugar until it resembles wet sand.
+                <br><small style="color:gray;">1 1/2 cups (150g) graham crackers, 1/2 cup (113g) melted butter, 2 tbsp (30g) brown sugar</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Press the mixture into a pie dish, bake for 15 minutes until slightly golden, and allow it to cool.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> In a mixing bowl, whisk egg yolks, whole egg, 1 can sweetened condensed milk, fresh lime juice, and lime zest until smooth.
+                <br><small style="color:gray;">3 egg yolks, 1 whole egg, can (375g) of sweetened condensed milk, 1/3 cup (80ml) fresh lime juice, zest of 2 limes</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Beat 3 egg whites until stiff peaks form, then gently fold them into the lime filling mixture until well combined.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Pour the lime filling into the cooled crust and bake for another 15 minutes, or until the filling is set but still slightly jiggly.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Let the pie cool to room temperature, then chill it in the fridge for at least 6 hours. For the best results, chill overnight.
+            </li>
+        </ul>
+        
+        <p><b>For Decoration:</b></p>
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Whip heavy cream with instant vanilla pudding mix.
+                <br><small style="color:gray;">1 cup (250ml) heavy cream, package (80g) instant vanilla pudding mix</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Slather or pipe it on the pie, then top with lime zest, pistachios, or any fresh berries! 🍋🍓
+            </li>
+        </ul>
+        
+        
+    </div>
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Lemon Key Pie" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

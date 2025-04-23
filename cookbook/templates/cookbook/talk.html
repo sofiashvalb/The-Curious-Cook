@@ -1,0 +1,57 @@
+{% extends "cookbook/layout.html" %}
+
+{% block body %}
+
+{% load static %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+    
+    if (form) {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const mailtoLink = `mailto:curiouscook@mail.local?subject=Message%20from%20${encodeURIComponent(name)}&body=Name:%20${encodeURIComponent(name)}%0D%0AEmail:%20${encodeURIComponent(email)}%0D%0AMessage:%20${encodeURIComponent(message)}`;
+
+            window.location.href = mailtoLink;
+        });
+    } else {
+        console.log('Form not found!');
+    }
+});
+
+</script>
+
+
+    <h1>Talk To Me <img src="{% static 'cookbook/talk2.jpg' %}" alt="talk" width="80" height="auto"></h1>
+
+    <div class="register-login-form">
+        <form id="contact-form" action="mailto:curiouscook@mail.local" method="post" enctype="text/plain">
+            {% csrf_token %}
+            <div class="form-group">
+                <label style="color: rgb(225, 131, 96);font-family: fantasy,sans-serif; font-size: 25px;" for="name">Name:</label>
+                <input class="form-control" type="text" id="name" name="name" value="{{ name }}" required>
+            </div>
+            <div class="form-group">
+                <label style="color: rgb(225, 131, 96);font-family: fantasy,sans-serif; font-size: 25px;" for="email">Email:</label>
+                <input class="form-control" type="email" id="email" name="email" value="{{ email }}" required>
+            </div>
+            <div class="form-group">
+                <label style="color: rgb(225, 131, 96);font-family: fantasy,sans-serif; font-size: 25px;" for="message">I'm listening...</label>
+                <textarea class="form-control" id="message" name="message" rows="6"  placeholder="Get Creative!" required></textarea>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+
+    </div>
+
+    <div style="text-align: center;">
+        <img src="{% static 'cookbook/idea.jpg' %}" alt="idea" width="300" height="auto">
+    </div>
+        
+
+{% endblock %}

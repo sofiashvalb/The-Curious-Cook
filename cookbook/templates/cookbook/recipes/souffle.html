@@ -1,0 +1,68 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        Easy, decadent, and a dream for chocolate lovers. 😍 This cake is rich, fudgy, and totally indulgent—with just 4 simple ingredients and <b>✨NO flour ✨</b>. It’s everything you crave in a dessert. Let’s get baking! 
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+    <p><b>For the Cake:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍫 8 oz (225g) dark chocolate</li>
+        <li>🧈 4 oz (120g) butter</li>
+        <li>🥚 6 large eggs (separated)</li>
+        <li>🍯 1/2 cup (4 oz / 100g) sugar</li>
+        <li>🧂 Pinch of salt</li>
+    </ul>
+
+    <hr>
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 20px; list-style-type: none;">
+            <li>💡 Don’t overbake—this cake should be fudgy and soft in the middle. The chill time makes all the difference!</li>
+            <li>🍫 Bonus Tip: For an extra indulgent touch, pour melted chocolate on top of the cake before serving. Or, simply sprinkle some cocoa powder.</li>
+        </ul>   
+        
+        <hr>
+        
+        <h5><b>Let’s Do This:</b></h5>
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Preheat your oven to 160°C (320°F), static.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> In a large bowl, melt the butter and dark chocolate together until smooth. Set aside to cool.
+                <br><small style="color:gray;">8 oz (225g) dark chocolate, 4 oz (120g) butter</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> In a mixer, whisk the egg yolks, salt, and sugar until light and fluffy.
+                <br><small style="color:gray;">6 large eggs (separated), Pinch of salt, 1/4 cup (50g) sugar</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Gently fold the egg yolk mixture into the melted chocolate until fully combined.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> In a clean bowl, beat the egg whites with the remaining sugar until stiff peaks form.
+                <br><small style="color:gray;">1/4 cup (50g) sugar</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Carefully fold the egg whites into the chocolate mixture. Be gentle but make sure it's well mixed.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Grease a 22cm (8.5") ring mold with butter (or use a springform pan). Pour in the batter, smooth the top, and bake for 30-35 minutes. The cake should be slightly wobbly in the center.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Let the cake cool completely in the fridge for at least 5 hours (trust me, it’s worth the wait!). After cooling, remove from the ring and transfer to a serving plate.
+            </li>
+        </ul>
+
+    </div>
+{% endblock %}
+
+{% block image %}
+
+    <img src="{{ card.image }}" alt="Flourless Chocolate Soufflé Cake" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+
+{% endblock %}

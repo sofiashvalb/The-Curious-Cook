@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-18 14:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cookbook/templates/cookbook/index.html:22
+msgid "Welcome to"
+msgstr "Bienvenido a"
+
+#: cookbook/templates/cookbook/index.html:22
+msgid "The Curious Cook"
+msgstr " El cocinero curioso"
+
+#: cookbook/templates/cookbook/index.html:26
+msgid ""
+" \n"
+"                        Always experimenting with new flavors and adding a "
+"twist to classics. \n"
+"                        <br>A space for sharing my culinary journey — and "
+"learning along the way.<br>\n"
+"                        Whether you're a seasoned chef or a curious "
+"beginner, feel free to \n"
+"                    "
+msgstr ""
+"Siempre experimentando con nuevos sabores y añadiendo un toque a los "
+"clásicos.<br>Un espacio para compartir mi viaje culinario — y aprender en el "
+"camino.<br>Ya seas un chef experimentado o un principiante curioso,<br> "
+"siéntete libre de compartir tus ideas o solicitudes."
+
+#: cookbook/templates/cookbook/index.html:37
+msgid ""
+" \n"
+"                        ideas or requests. Let's cook and discover "
+"together! \n"
+"                    "
+msgstr "Cocinemos y descubramos juntos!"
+
+#: cookbook/templates/cookbook/layout.html:40
+msgid "Top 5"
+msgstr ""
+
+#: cookbook/templates/cookbook/layout.html:44
+msgid "My Picks"
+msgstr "Mis favoritos"
+
+#: cookbook/templates/cookbook/layout.html:47
+msgid "Log Out"
+msgstr "Salir"
+
+#: cookbook/templates/cookbook/layout.html:51
+msgid "Log In"
+msgstr "Entrar"
+
+#: cookbook/templates/cookbook/layout.html:54
+msgid "Register"
+msgstr "Registrarse"
+
+#: cookbook/templates/cookbook/layout.html:60
+msgid "Categories"
+msgstr "Categorías"
+
+#: cookbook/templates/cookbook/layout.html:88
+msgid "Search"
+msgstr "Buscar"
+
+#: cookbook/views.py:19
+msgid "Always experimenting with new flavors and adding a twist to classics."
+msgstr ""

@@ -1,0 +1,71 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+            Soft, golden, and packed with perfectly seasoned meat—these buns are pure comfort food! 🤤
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+
+    <p><b>For the Buns:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+            <li>🍞 2.2lbs (1kg) flour</li>
+            <li>🍳 2 eggs</li>
+            <li>💧 2 cups (480ml) water</li>
+            <li>🌿 1/2 cup (125ml) vegetable oil</li>
+            <li>🍬 2/3 cup (135g) sugar</li>
+            <li>🧂 1 tsp salt</li>
+            <li>🌱 Bun seasoning: sesame seeds, garlic flakes, poppy seeds (or whatever you like!)</li>
+    </ul>
+
+    <p><b>For the Meat Filling:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+            <li>🥩 1lb (500g) minced meat</li>
+            <li>🧅 2 large onions, chopped</li>
+            <li>🌿 Handful of chopped parsley</li>
+            <li>🫒 Olive oil</li>
+            <li>🧂 Salt & pepper to taste</li>
+            <li>🌶️ 1 tsp turmeric, paprika, cumin, and your favorite spices</li>
+    </ul>
+    <hr>
+
+    <div class="row">
+            <h5><b>✨ Tips & Suggestions:</b></h5>
+            <ul style="padding-left: 20px; list-style-type: none;">
+                    <li>💡 Quick Rise: Place dough in a warm oven (50°C / 120°F) for faster rising.</li>
+                    <li>🍴 Sauce Pairing: These are amazing with</li>
+                        <!--<a href="{% url 'chimichurri' %}" alt="chimichurri" style="text-decoration: none;"><b>Chimichurri</b></a>
+                            or tahini 🙌</li>-->
+            </ul>
+            <hr>
+
+            <h5><b>Let's Do This:</b></h5>
+            <!-- Custom spacing between list items in instructions -->
+            <ul style="padding-left: 50px; list-style-type: none;">
+                <li style="margin-bottom: 20px;"><input type="checkbox">Cook onions in olive oil until golden. Add minced meat and cook through, then stir in spices. Remove from heat and add parsley. Let cool.
+                    <br><small style="color:gray;">2 large onions, 500g minced meat</small>
+                </li>
+                <li style="margin-bottom: 20px;"><input type="checkbox">In a mixer, combine all bun ingredients (except salt). Once fully combined, add salt and mix for another 10 minutes.
+                    <br><small style="color:gray;">2.2lbs (1kg) flour, 2 eggs, 2 cups (480ml) water, 1/2 cup (125ml) vegetable oil, 2/3 cup (135g) sugar, 1 tsp salt</small>
+                </li>
+                <li style="margin-bottom: 20px;"><input type="checkbox">Let dough rise until doubled. (For a faster rise, check the Tips section!)
+                    <br><small style="color:gray;">Dough rising time</small>
+                </li>
+                <li style="margin-bottom: 20px;"><input type="checkbox">Divide dough into balls, flatten, fill with meat, and seal.
+                    <br><small style="color:gray;">2.8oz (80g) per bun, meat filling</small>
+                </li>
+                <li style="margin-bottom: 20px;"><input type="checkbox"> Rise: Let buns rest for 20 minutes to rise.</li>
+                <li style="margin-bottom: 20px;"><input type="checkbox"> Bake: Preheat oven to 175°C (350°F). Brush with egg wash, top with seasoning, and bake for 35 minutes until golden!
+                </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Bun-believable Meat Pockets" class="d-inline-block align-text-center" style="max-width: 100%; height: auto;">
+{% endblock %} 
+
+
+

@@ -1,0 +1,68 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        Crispy on top, creamy on the inside—this potato gratin hits all the right notes. Perfectly layered with rich cheese and a velvety sauce, it's the ultimate comfort food to wow your taste buds. 🙌
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+
+    <p><b>For the Potato Gratin:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🧀 225g Gruyère / sharp cheddar cheese / mix</li>
+        <li>🥔 6-8 medium potatoes</li>
+        <li>🧄 3 cloves garlic, minced</li>
+        <li>🧈 4 tbsp + 1 tsp unsalted butter</li>
+        <li>🌾 1/4 cup all-purpose flour</li>
+        <li>🧂 1 tsp Dijon mustard</li>
+        <li>🧂 1 tsp kosher salt</li>
+        <li>🌶️ 1/2 tsp freshly ground black pepper</li>
+        <li>🥛 2 cups whole milk</li>
+    </ul>
+    <hr>
+
+    <h5><b>Tips & Suggestions:</b></h5>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🌿 Top with fresh herbs like thyme or rosemary for added flavor and a pop of color.</li>
+        <li>🥛 Swap the milk with heavy cream for a richer, thicker sauce. I prefer milk for a lighter, more balanced gratin, but both work great.</li>
+    </ul>
+    <hr>
+
+    <h4><b>Let's Do This:</b></h4>
+    <ul style="padding-left: 50px; list-style-type: none;">
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> Preheat the oven to 400ºF (200ºC). Butter a 9x13-inch baking dish to prevent sticking.
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> Grate the cheese and slice the potatoes into thin rounds. Mince the garlic cloves.
+            <br><small style="color:gray;">225g cheese, 6-8 medium potatoes, 3 cloves garlic</small>
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> In a large saucepan, melt 4 tbsp of butter over medium heat. Add the garlic and cook for 1 minute until fragrant.
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> Stir in the flour, mustard, salt, and pepper. Cook for 1 more minute to form a thick paste.
+            <br><small style="color:gray;">1/4 cup flour, 1 tsp mustard, 1 tsp salt, 1/2 tsp pepper</small>
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> Gradually whisk in the milk and bring to a simmer. Once the mixture thickens, remove from heat and stir in the grated cheese until smooth.
+            <br><small style="color:gray;">2 cups milk</small>
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> In the prepared baking dish, layer the sauce, then a layer of potato slices, then more sauce. Repeat the layers until the potatoes and sauce are used up.
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> Bake uncovered for 60-75 minutes until the top is golden brown and the potatoes are tender when pierced with a fork.
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> Let the gratin cool for 10 minutes before serving. For an extra cheesy finish, sprinkle some parmesan on top and bake for 3 more minutes.
+        </li>
+    </ul>
+    
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Potato Gratin" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

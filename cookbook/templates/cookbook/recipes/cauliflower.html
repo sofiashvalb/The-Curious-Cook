@@ -1,0 +1,67 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        Discover the delicious side of cauliflower with this roasted version, packed with savory spices and a crispy finish—easy to make and a perfect addition to any meal.🌿
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+
+    <p><b>For the Roasted Cauliflower:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🥦 1 head of white cauliflower, cut into florets</li>
+        <li>🫒 1/4 cup (60 ml) olive oil</li>
+        <li>🧂 1 tsp salt and pepper (each)</li>
+        <li>🌶️ 1 tsp paprika</li>
+        <li>🧀 2 Tbsp grated Parmesan cheese</li>
+    </ul>
+    <hr>
+
+    <p><b>For the Yogurt Sauce:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍶 1 cup Greek yogurt (or plain yogurt)</li>
+        <li>🧄 1 garlic clove, minced</li>
+        <li>🥄 1 tsp mustard</li>
+        <li>🌿 1 Tbsp dill (fresh or dried, or any herbs you like)</li>
+        <li>🍋 2 Tbsp lemon juice</li>
+        <li>🧂 Salt & pepper to taste</li>
+        <li>✨ Optional: Crumbled feta cheese</li>
+    </ul>
+    <hr>
+
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 20px; list-style-type: none;">
+            <li>💡 Not feeling the Yogurt sauce? Try a classic <a href="{% url 'recipe' card_id=8 %}" alt="tahini" style="text-decoration: none;"><b>Tahini</b></a> sauce for a unique, flavorful twist!</li>
+            <li>✨ Add fresh herbs or a little honey for extra flavor!</li>
+        </ul>
+        <hr>
+
+        <h5><b>Let's Do This:</b></h5>
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> 🔥 Preheat the oven to 450°F (230°C).
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> 🥄 Prep the cauliflower: Mix olive oil, salt, pepper, paprika, and Parmesan. Coat the cauliflower florets.
+                <br><small style="color:gray;">1/4 cup (60 ml) olive oil, 1 tsp salt, 1 tsp pepper, 1 tsp paprika, 2 tsps grated Parmesan</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> 🍽️ Roast: Spread the cauliflower on a baking sheet (covered with parchment paper), roast for 25 minutes, then broil uncovered for 10 minutes until golden brown.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> 🥣 Make the sauce: Mix yogurt, garlic, mustard, herbs, lemon juice, salt, and pepper. Stir in feta (optional).
+                <br><small style="color:gray;">1 cup Greek yogurt, 1 garlic clove, 1 tsp mustard, dill, 2 Tbsp lemon juice, Salt & pepper</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> ✨ Serve: Spread yogurt sauce on a plate, top with cauliflower or drizzle sauce on top, and enjoy!
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="White Roasted Cauliflower" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

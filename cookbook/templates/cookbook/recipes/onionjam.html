@@ -1,0 +1,50 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        Give your everyday meals a sophisticated twist with this decadent caramelized onion jam. It’s the perfect topping for everything from burgers to baked brie! 🧅🍇
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+
+    <p><b>For the Caramelized Onion Jam:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🧅 4 big red onions, sliced</li>
+        <li>🍶 2 tbsp vegetable or grapeseed oil</li>
+        <li>🍷 240 ml (1 cup) red wine</li>
+        <li>🍯 3-4 tbsp brown sugar</li>
+        <li>🍇 3 tbsp balsamic vinegar</li>
+    </ul>
+    <hr>
+
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 20px; list-style-type: none;">
+            <li>🌱 Add Fresh Herbs: For an extra layer of flavor, try adding a sprig of thyme or rosemary to the jam as it simmers. The herbs infuse their fragrance into the sweetness of the onions.</li>
+        </ul>
+        <hr>
+
+        <h5><b>Let's Do This:</b></h5>
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> 🍳 Heat the oil in a pan over medium heat. Add the onions and cook for 5 minutes until soft and golden.
+                <br><small style="color:gray;">2 tbsp vegetable or grapeseed oil, 4 big red onions (sliced)</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> 🍷 Add red wine, brown sugar, and balsamic vinegar to the pan. Lower the heat to low and cook for about 30 minutes, stirring occasionally, until most of the liquid evaporates and the jam thickens.
+                <br><small style="color:gray;">240 ml (1 cup) red wine, 3-4 tbsp brown sugar, 3 tbsp balsamic vinegar</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> 🧊 Let it cool down, then transfer the jam to a closed container and store in the fridge. It’s that simple!
+                <br><small style="color:gray;">Store in an airtight container in the fridge for up to 2 weeks</small>
+            </li>
+        </ul>
+
+    </div>
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Caramelized Onion Jam" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

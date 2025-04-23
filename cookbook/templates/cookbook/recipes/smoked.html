@@ -1,0 +1,56 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+                <p class="text-body-secondary">
+                        Perfectly creamy cream cheese, paired with rich smoked salmon and fresh herbs—this appetizer is quick, easy, and packed with flavor! 😋
+                </p>
+                <h4><b>Ingredients:</b></h4>
+                <ul style="padding-left: 20px; list-style-type: none;">
+                    <li>🧀 10.5oz (300g) cream cheese</li>
+                    <li>🐟 4.2oz (120g) smoked salmon</li>
+                    <li>🌿 Fresh dill (or any herb you like)</li>
+                    <li>🌿 Chopped chives (or onion)</li>
+                    <li>🫒 2 tbsp (30ml) olive oil</li>
+                    <li>🍷 1 tbsp (15ml) balsamic vinegar</li>
+                    <li>🫒 capers (optional)</li> 
+                </ul>
+                
+                <hr>
+
+                <div class="row">
+                        <h5><b>Tips & Suggestions:</b></h5>
+                        <ul style="padding-left: 50px; list-style-type: none;">
+                            <li>💡 For extra crunch, serve with crispy crackers or toasted rustic bread on the side.</li>
+                            <li>💡 If you choose to use onion, soak it in water for a few minutes before chopping to mellow the flavor.</li>
+                        </ul>
+                        <hr>
+
+                        <h5><b>Let's Do This:</b></h5>
+                        <ul style="padding-left: 50px; list-style-type: none;">
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> Spread the cream cheese on a plate or board, creating a smooth layer.
+                                    <br><small style="color:gray;">300g cream cheese</small>
+                                </li>                     
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> Arrange the smoked salmon slices on top of the cream cheese.
+                                    <br><small style="color:gray;">120g smoked salmon</small>
+                                </li>
+                                
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> Drizzle olive oil and balsamic vinegar over the salmon and cream cheese.
+                                </li>                   
+                            
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> Sprinkle cappers, fresh dill, chives or onion on top for flavor and color.
+                                </li>
+                            </ul>
+                            
+                </div>
+    {% endblock %}
+
+    {% block image %}
+
+                <img src="{{ card.image }}" alt="Smoked Salmon Cream Cheese Appetizer" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+    {% endblock %}

@@ -1,0 +1,90 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+                <p class="text-body-secondary">
+                        A creamy, indulgent cheesecake with a buttery cookie crust, sweet blueberries, and a crumbly topping. Perfect for any celebration or treat! ✨
+                </p>
+                <h4><b>Ingredients:</b></h4>
+
+                <p><b>🍪 Cookie Crust:</b></p>
+                <ul style="padding-left: 20px; list-style-type: none;">
+                        <li>9oz (250g) digestive or graham crackers</li>
+                        <li>2 tbsp brown sugar</li>
+                        <li>1/3 cup (75g) butter</li>
+                </ul>
+
+                <p><b>🫐 Blueberries:</b></p>
+                <ul style="padding-left: 20px; list-style-type: none;">
+                        <li>2 cups (300g) fresh blueberries</li>
+                        <li>1 tbsp granulated sugar</li>
+                        <li>1 tbsp all-purpose flour</li>
+                        <li>2 tsp lemon juice</li>
+                </ul>
+
+                <p><b>🌾 Crumble:</b></p>
+                <ul style="padding-left: 20px; list-style-type: none;">
+                        <li>3/4 cup (110g) all-purpose flour</li>
+                        <li>1/3 cup (80g) dark brown sugar</li>
+                        <li>5 tbsp (70g) butter (melted)</li>
+                </ul>
+
+                <p><b>🧀 Cheesecake:</b></p>
+                <ul style="padding-left: 20px; list-style-type: none;">
+                        <li>28oz (800g) full-fat cream cheese (room temperature)</li>
+                        <li>1 1/3 cups (260g) granulated sugar</li>
+                        <li>3/4 cup + 2 tbsp (200g) sour cream (room temperature)</li>
+                        <li>1 ½ tbsp cornstarch</li>
+                        <li>2 ½ tsp vanilla extract</li>
+                        <li>4 large eggs (room temperature)</li>
+                </ul>
+                <hr>
+
+                <div class="row">
+                        <h5><b>✨ Tips for the Perfect Cheesecake:</b></h5>
+                        <ul style="padding-left: 50px; list-style-type: none;">
+                                <li>💡 Room Temperature Ingredients: Make sure the cream cheese, sour cream, and eggs are at room temperature for a smooth batter.</li>
+                                <li>💡 Fresh Blueberries: Fresh blueberries work best to avoid excess moisture in the filling. Any other fresh berries will work too.</li>
+                                <li>💡 Lighter Version: For a lighter cheesecake, swap to 600g of lighter cream cheese and 400g of sour cream.</li>
+                        </ul>
+                        <hr>
+
+                        <h5><b>Let's Do This:</b></h5>
+                        <ul style="padding-left: 50px; list-style-type: none;">
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> <b>Make the Cookie Crust:</b> In a food processor, blend crackers with brown sugar until fine crumbs form. Melt the butter and mix it into the crumbs. Press the mixture into the base of a 9-inch springform pan lined with parchment paper. Bake at 160°C (325°F) for 10 minutes. Let it cool while you prepare the rest.
+                                    <br><small style="color:gray;">9oz (250g) crackers, 1/3 cup (75g) butter</small>
+                                </li>                     
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> <b>Prepare the Blueberries:</b> In a bowl, mix blueberries with sugar, flour, and lemon juice. Set aside.
+                                    <br><small style="color:gray;">2 cups (300g) blueberries</small>
+                                </li>
+                                
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> <b>Prepare the Crumble:</b> Mix flour, brown sugar, and melted butter until it forms a crumbly texture. Set aside.
+                                    <br><small style="color:gray;">3/4 cup (110g) flour, 1/3 cup (80g) brown sugar, 5 tbsp (70g) butter</small>
+                                </li>                   
+                            
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> <b>Cheesecake Filling:</b> Beat cream cheese with sugar for 1 minute until smooth. Add sour cream, cornstarch, and vanilla extract. Mix until fully combined. Add 4 eggs, two at a time, mixing on low speed after each addition. Pour the cheesecake batter into the springform pan.
+                                    <br><small style="color:gray;">28oz (800g) cream cheese, 1 1/3 cups (260g) sugar, 3/4 cup + 2 tbsp (200g) sour cream, 4 eggs</small>
+                                </li>                       
+                            
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> <b>Assemble & Bake:</b> Gently spoon the blueberries over the cheesecake, followed by the crumble. Place in the oven and add hot water in a pan underneath the springform. Bake at 160°C (325°F) for 1 hour and 20-30 minutes. The center should be slightly wobbly.
+                                </li>
+                            
+                                <li style="margin-bottom: 20px;">
+                                    <input type="checkbox"> <b>Cool & Chill:</b> Turn off the oven and leave the door slightly open for 1 hour. Then, cool to room temperature for about 1 hour. Transfer to the fridge and let it set for at least 6 hours, preferably overnight, before serving.
+                                </li>
+                            </ul>
+                            
+                </div>
+    {% endblock %}
+
+    {% block image %}
+
+                <img src="{{ card.image }}" alt="Blueberry Cheesecake" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+    {% endblock %}
+           

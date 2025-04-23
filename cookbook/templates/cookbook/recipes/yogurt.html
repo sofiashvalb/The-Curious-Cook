@@ -1,0 +1,88 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        Three yogurt-based sauces that’ll kick your meals up a notch—tangy, creamy, and fresh. Perfect for veggies, grilled meats, or anything you’re craving. Once you try these, you’ll never settle for basic again.
+    </p>
+
+    <h5><b> Mustard Yogurt Sauce </b>– The Tangy Game Changer</h5>
+    <p>
+        Creamy, tangy, and just the right kick! Perfect for salads, grilled veggies, or anything that needs a flavor boost. 🧀🥗
+    </p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🫙 200g Greek yogurt (or plain yogurt)</li>
+        <li>🌟 1 tsp mustard</li>
+        <li>🍋 Squeeze of lemon juice</li>
+        <li>🧄 1 garlic clove, minced</li>
+        <li>🫒 1 tbsp olive oil</li>
+        <li>🧂 Salt & pepper, to taste</li>
+        <li>🧀 50g feta cheese, crumbled</li>
+        <li>🌿 Dried oregano, to taste</li>
+        <li>🌶️ Paprika (optional, for a little kick)</li>
+    </ul>
+    <hr>
+
+    <h5><b>Tzatziki Yogurt Sauce</b> - The Fresh, Cool Classic</h5>
+    <p>
+        Packed with cucumber and dill, this is the ultimate dip for veggies, pita, or anything grilled. It’s fresh, creamy, and totally addictive. 🥒🍋
+    </p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🫙 200g Greek yogurt (or plain yogurt)</li>
+        <li>🥒 1 cucumber, grated</li>
+        <li>🧄 1 garlic clove, minced</li>
+        <li>🍋 1 tbsp lemon juice</li>
+        <li>🌿 A handful of fresh dill, chopped</li>
+        <li>🧂 Salt & pepper, to taste</li>
+        <li>🫒 Olive oil (optional, if the yogurt is too thick)</li>
+    </ul>
+    <hr>
+
+    <h5><b>Tartar Yogurt Sauce</b>  – The Seafood Lover’s Dream</h5>
+    <p>
+        A creamy twist on the classic tartar, with dill, capers, and mustard. The perfect partner for fish and fries (or anything crispy!). 🐟🍟
+    </p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🫙 200g Greek yogurt (or plain yogurt)</li>
+        <li>🌿 2 tbsp chopped dill</li>
+        <li>🥒 1 tbsp chopped capers</li>
+        <li>🍋 Squeeze of half a lemon</li>
+        <li>🥄 3 tbsp relish</li>
+        <li>🌟 2 tsp mustard</li>
+        <li>🧂 Salt & pepper, to taste</li>
+    </ul>
+    <hr>
+
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 20px; list-style-type: none;">
+            <li>✨ Add fresh herbs or a little honey for extra flavor!</li>
+            <li>🎨 Feel free to improvise! I’d love to hear your suggestions and how you put your own spin on this sauce.</li>
+        </ul>
+        <hr>
+
+        <h5><b>Let's Do This:</b></h5>
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> 🥄 Prep the mustard yogurt sauce: Mix yogurt, mustard, garlic, lemon, olive oil, salt, pepper, feta, and oregano. Add paprika for extra heat.
+                <br><small style="color:gray;">200g Greek yogurt, 1 tsp mustard, 1 tsp lemon juice, 1 tbsp olive oil, 50g feta, oregano, paprika (optional)</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> 🥒 Prep the tzatziki yogurt sauce: Grate cucumber, squeeze out the juice, mix with yogurt, garlic, lemon, dill, salt, and pepper. Add olive oil if too thick.
+                <br><small style="color:gray;">200g Greek yogurt, 1 cucumber, 1 garlic clove, 1 tbsp lemon juice, dill, olive oil (optional)</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> 🍽️ Prep the yogurt tartar sauce: Mix yogurt, dill, capers, lemon, relish, mustard, salt, and pepper.
+                <br><small style="color:gray;">200g Greek yogurt, 2 tbsp dill, 1 tbsp capers, 3 tbsp relish, 2 tsp mustard, salt, pepper</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> ✨ Serve: Enjoy these sauces with veggies, grilled meats, fish, fries, or anything you love!
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Three Yogurt Sauces" class="d-inline-block align-text-center" style="max-width: 100%; height: auto;">
+{% endblock %}

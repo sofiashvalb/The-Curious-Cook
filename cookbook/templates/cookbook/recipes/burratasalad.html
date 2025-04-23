@@ -1,0 +1,58 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+        <p class="text-body-secondary">
+                Soft, creamy burrata, fresh veggies, and a tangy dressing to bring it all together—this salad is a real crowd-pleaser! ✨
+        </p>
+
+        <h4><b>Ingredients:</b></h4>
+
+        <p><b>For the Salad:</b></p>
+        <ul style="padding-left: 20px; list-style-type: none;">
+                <li>🧀 Burrata cheese</li>
+                <li>🍅 Cherry tomatoes</li>
+                <li>🥑 1 avocado (cubed)</li>
+                <li>🌱 Fresh basil leaves</li>
+                <li>🥬 Arugula leaves</li>
+                <li>🌿 Optional: Small radishes (thinly sliced)</li>
+        </ul>
+
+        <p><b>For the Dressing:</b></p>
+        <ul style="padding-left: 20px; list-style-type: none;">
+                <li>🫒 2 tbsp olive oil</li>
+                <li>🍷 1 tbsp balsamic vinegar</li>
+                <li>🍋 1 tbsp lemon juice</li>
+                <li>🧄 2 garlic cloves (minced)</li>
+                <li>🧂 Salt & pepper to taste</li>
+        </ul>
+        <hr>
+
+        <div class="row">
+                <h5><b>Tips & Suggestions:</b></h5>
+                <ul style="padding-left: 20px; list-style-type: none;">
+                        <li>💡 You can let the burrata sit in warm water for a few minutes to soften the inside. It makes the cheese even creamier! 😍</li>
+                        <li>💡 No burrata? Use mozzarella balls ripped apart instead—still delish! 🧀✨</li>
+                </ul>
+                <hr>
+
+                <h5><b>Let's Do This:</b></h5>
+                <!-- Custom spacing between list items in instructions -->
+                <ul style="padding-left: 50px; list-style-type: none;">
+                        <li style="margin-bottom: 20px;"><input type="checkbox"> Place the arugula leaves on a flat plate. Spread the tomatoes (cut in halves or quarters) and avocado cubes. Add radish slices if using.
+                        </li>
+                        <li style="margin-bottom: 20px;"><input type="checkbox"> In a separate dish, mix together olive oil, balsamic vinegar, lemon juice, garlic (minced), salt, and pepper. Drizzle the dressing over the salad.
+                                <br><small style="color:gray;">2 tbsp olive oil, 1 tbsp balsamic vinegar, 1 tbsp lemon juice, 2 garlic cloves, salt, pepper</small>
+                        </li>
+                        <li style="margin-bottom: 20px;"><input type="checkbox"> Place the burrata on top of the salad. If you want to be extra fancy, rip it apart instead of placing it whole, letting that creamy goodness ooze out. 😍
+                        </li>
+                        <li style="margin-bottom: 20px;"><input type="checkbox"> Drizzle some of the dressing on top of the burrata.
+                        </li>
+                </ul>
+        </div>
+{% endblock %}
+
+{% block image %}
+        <img src="{{ card.image }}" alt="Burrata Salad" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

@@ -1,0 +1,209 @@
+{% extends "cookbook/layout.html" %}
+
+{% block body %}
+
+{% load static %}
+<script>
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) {
+                return parts.pop().split(';').shift();
+            }
+            return null;
+        }
+    
+        function vote(id) {
+            const topLikeButton = document.querySelector(`.vote_card_top_${id}`);
+            const bottomLikeButton = document.querySelector(`.vote_card_bottom_${id}`);
+    
+            fetch(`/vote/${id}/`, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({ card_id: id })
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.redirect) {
+                    window.location.href = '/login'; // Redirect to login if not authenticated
+                    return;
+                }
+    
+                // Update the heart icon based on whether the card is liked or not
+                if (result.liked) {
+                    topLikeButton.innerHTML = `<img class="heart" src="{% static 'cookbook/fullHeart.jpg' %}" alt="liked" width="50" height="auto">`;
+                    bottomLikeButton.innerHTML = `<img class="heart" src="{% static 'cookbook/fullHeart.jpg' %}" alt="liked" width="50" height="auto">`;
+                } else {
+                    topLikeButton.innerHTML = `<img class="heart" src="{% static 'cookbook/emptyHeart.jpg' %}" alt="unliked" width="35" height="auto">`;
+                    bottomLikeButton.innerHTML = `<img class="heart" src="{% static 'cookbook/emptyHeart.jpg' %}" alt="unliked" width="35" height="auto">`;
+                }
+    
+                // Update the total likes count displayed on the page
+                const totalLikesElement = document.getElementById(`total-likes-${id}`);
+                if (totalLikesElement) {
+                    totalLikesElement.textContent = result.total_likes; // Update the displayed total likes
+                }
+            })
+            .catch(error => {
+                console.error('Error voting:', error);
+            });
+        }
+    
+        function save_recipe(id) {
+            const topSaveButton = document.querySelector(`.save_button_top_${id}`);
+            const bottomSaveButton = document.querySelector(`.save_button_bottom_${id}`);
+    
+            fetch(`/savedrecipe/${id}/`, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({})
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.redirect) {
+                    window.location.href = '/login';  // Redirect to login if not authenticated
+                    return;
+                }
+    
+                if (result.saved) {
+                    topSaveButton.innerHTML = `<img class="bookmark" src="{% static 'cookbook/bookmarkUnsave.jpg' %}" alt="unsave" width="40" height="auto">`;
+                    bottomSaveButton.innerHTML = `<img class="bookmark" src="{% static 'cookbook/bookmarkUnsave.jpg' %}" alt="unsave" width="40" height="auto">`;
+                } else {
+                    topSaveButton.innerHTML = `<img class="bookmark" src="{% static 'cookbook/bookmarkSave.jpg' %}" alt="save" width="35" height="auto">`;
+                    bottomSaveButton.innerHTML = `<img class="bookmark" src="{% static 'cookbook/bookmarkSave.jpg' %}" alt="save" width="35" height="auto">`;
+                }
+            })
+            .catch(error => {
+                console.error('Error saving:', error);
+            });
+        }
+
+    </script>
+    
+<div class="container" style="padding-left: 60px; padding-right: 60px;">
+        <div class="row">
+                <!-- Left Column -->
+                <div id="desktop_border" class="col-md-8">
+
+                        <div class="btn-group" style="display: flex; float: right;">
+                                {% if user.is_authenticated %}
+                                        {% if card in user.saved_item.all %}
+                                                <button type="button" class="btn save_button_top_{{ card.id }}" onclick="save_recipe('{{ card.id }}')">
+                                                        <img class="bookmark" src="{% static 'cookbook/bookmarkUnsave.jpg' %}" alt="unsave" width="40" height="mx-auto">
+                                                </button>
+                                        {% else %}
+                                                <button type="button" class="btn save_button_top_{{ card.id }}" onclick="save_recipe('{{ card.id }}')">
+                                                        <img class="bookmark" src="{% static 'cookbook/bookmarkSave.jpg' %}" alt="save" width="35" height="mx-auto">    
+                                                </button>
+                                        {% endif %}
+                                {% else %}
+                                        <button type="button" class="btn save_button_top_{{ card.id }}" onclick="save_recipe('{{ card.id }}')">
+                                                <img class="bookmark" src="{% static 'cookbook/bookmarkSave.jpg' %}" alt="save" width="35" height="auto">
+                                        </button>
+                                {% endif %}             
+                        </div>
+
+                        <div class="btn-group" style="display: flex; float: right;">
+                                <!-- Check if user is authenticated -->
+                                {% if user.is_authenticated %}
+                                    <!-- If the user has already liked the card -->
+                                    {% if card in user.liked_item.all %}
+                                        <button type="button" class="btn vote_card_top_{{ card.id }}" onclick="vote('{{ card.id }}')">
+                                            <img class="heart" src="{% static 'cookbook/fullHeart.jpg' %}" alt="liked" width="50" height="auto">
+                                        </button>
+                                    {% else %}
+                                        <!-- If the user has not liked the card yet -->
+                                        <button type="button" class="btn vote_card_top_{{ card.id }}" onclick="vote('{{ card.id }}')">
+                                            <img class="heart" src="{% static 'cookbook/emptyHeart.jpg' %}" alt="unliked" width="35" height="auto">
+                                        </button>
+                                    {% endif %}
+                                {% else %}
+                                    <!-- If the user is not logged in, show the empty heart -->
+                                    <button type="button" class="btn vote_card_top_{{ card.id }}" onclick="vote('{{ card.id }}')">
+                                        <img class="heart" src="{% static 'cookbook/emptyHeart.jpg' %}" alt="unliked" width="35" height="auto">
+                                    </button>
+                                {% endif %}
+                            </div>
+
+                <br>
+                
+                <h1 style="padding: 30px; text-align: left; color: rgba(5, 136, 5, 0.909);"><b>{{ card.title }}</b></h1>
+                {% block left %}
+                {% endblock %}
+
+                <hr>
+
+                <!-- Bottom Buttons for Voting and Saving (Same functionality as top buttons) -->
+                <div class="btn-group"  style="display: flex; float: left;">
+                        <p>✨ Loved the recipe? Vote here!
+                                {% if user.is_authenticated %}
+                                        {% if card in user.liked_item.all %}
+                                                <button type="button" class="btn vote_card_bottom_{{ card.id }}" onclick="vote('{{ card.id }}')">
+                                                        <img class="heart" src="{% static 'cookbook/fullHeart.jpg' %}" alt="tnx" width="50" height="auto">
+                                                </button>
+                                        {% else %}
+                                                <button type="button" class="btn vote_card_bottom_{{ card.id }}" onclick="vote('{{ card.id }}')">
+                                                        <img class="heart" src="{% static 'cookbook/emptyHeart.jpg' %}" alt="vote" width="35" height="auto">
+                                                </button>
+                                        {% endif %}
+                                {% else %}
+                                        <button type="button" class="btn vote_card_bottom_{{ card.id }}" onclick="vote('{{ card.id }}')">
+                                                <img class="heart" src="{% static 'cookbook/emptyHeart.jpg' %}" alt="vote" width="35" height="auto">
+                                        </button>
+                                {% endif %}
+                        </p>
+                </div>
+                <div class="btn-group"  style="display: flex; float: left;">
+                        <p>✨ Or save it for later 
+                        {% if user.is_authenticated %}
+                                {% if card in user.saved_item.all %}
+                                        <button type="button" class="btn save_button_bottom_{{ card.id }}" onclick="save_recipe('{{ card.id }}')">
+                                                <img class="bookmark" src="{% static 'cookbook/bookmarkUnsave.jpg' %}" alt="unsave" width="40" height="mx-auto">
+                                        </button>
+                                {% else %}
+                                        <button type="button" class="btn save_button_bottom_{{ card.id }}" onclick="save_recipe('{{ card.id }}')">
+                                                <img class="bookmark" src="{% static 'cookbook/bookmarkSave.jpg' %}" alt="save" width="35" height="auto">
+                                        </button>
+                                {% endif %}
+                        {% else %}
+                                <button type="button" class="btn save_button_bottom_{{ card.id }}" onclick="save_recipe('{{ card.id }}')">
+                                        <img class="bookmark" src="{% static 'cookbook/bookmarkSave.jpg' %}" alt="save" width="35" height="auto">
+                                </button>
+                        {% endif %}
+                        </p>
+                </div>
+                
+        </div>
+
+        <!-- Right Column (Sticky Photo + Top 5 Recipes) -->
+        <div class="col-md-4" style="position: -webkit-sticky; position: sticky; top: 150px; z-index: 10; padding-left: 20px; height: calc(100vh - 80px);">
+                <!-- Photo Section -->
+                <div class="d-flex justify-content-center" style="margin-bottom: 5px;">
+                        {% block image %}
+                        {% endblock %}
+                </div>
+                <hr>
+                <!-- Top 5 Recipes Section -->
+
+                <h1 style="font-size: 30px;"><b>Top 5 Recipes:</b></h1>
+
+                <ol style="padding-left: 20px; font-weight: bold; color: rgb(216, 102, 64);">
+                        {% for card in top_cards %}
+                                <li id="top-liked">
+                                        <a href="{% url 'recipe' card_id=card.id %}" alt="{{ card.title }}" 
+                                                style="font-weight: lighter; text-decoration: none; font-size: 14px;">
+                                                <b>{{ card.title }}</b>
+                                        </a>
+                                </li>
+                        {% endfor %}
+                </ol>      
+        </div>
+</div>
+
+{% endblock %}

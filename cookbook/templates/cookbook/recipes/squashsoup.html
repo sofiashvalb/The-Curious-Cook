@@ -1,0 +1,67 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        This zicchini soup is a cozy classic with a twist—it's got carrots in the mix! 🥕 Simple, yet so flavorful. You can skip the carrots, but they definitely boost the taste! 
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+    <p><b>For the Soup:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🧅 1 onion</li>
+        <li>🥕 2-3 carrots</li>
+        <li>🌿 2-3 celery stalks (including leaves for later)</li>
+        <li>🥒 2-3 zucchini</li>
+        <li>🧄 3-4 garlic cloves</li>
+        <li>🌱 Fresh parsley & cilantro</li>
+        <li>🧂 Salt & pepper to taste</li>
+        <li>🌶️ Cumin & turmeric (optional, for extra flavor)</li>
+        <li>🍲 1 cup vegetable broth (optional)</li>
+    </ul>
+    <hr>
+
+    <h5><b>Tip:</b></h5>
+    <ul style="list-style-type: none;">
+        <li style="margin-bottom: 20px;">
+            🥔 If you like your soups a bit more substantial, adding potatoes can make it richer and more filling. Though I personally prefer a lighter soup, feel free to adjust to your taste! 
+        </li>
+    </ul>
+
+    <hr>
+
+    <div class="row">
+        <h5><b>Let’s Do This:</b></h5>
+        <!-- Custom spacing between list items in instructions -->
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Heat some olive oil in a large pot and sauté the onion, carrots, and celery stalks until softened and lightly caramelized.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Add the zucchini, parsley, cilantro, celery leaves, and garlic, cooking for a few more minutes until fragrant.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Season with salt, pepper, and optional cumin and turmeric to taste.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Pour in the vegetable broth (if using) and enough water to cover the veggies. Let it simmer on medium heat for 40-50 minutes, until everything is soft.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Once the carrots are tender, turn off the heat.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Blend the soup until smooth, adding more water to reach your preferred consistency.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> For an extra flavor boost, drizzle with sesame oil and soy sauce before serving! You can also add some dried chili flakes for a little extra heat. Quick, easy and Sooo Goooood!ל
+            </li>
+        </ul>
+        
+
+    </div>
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Comforting Carrot & Zucchini Soup" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

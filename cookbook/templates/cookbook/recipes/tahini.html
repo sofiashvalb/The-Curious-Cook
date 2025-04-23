@@ -1,0 +1,43 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        Ready to take your taste buds on a flavorful ride? This creamy tahini sauce is perfect for dipping, drizzling, or spreading—an easy crowd-pleaser you'll want to make again and again!
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🥛 1 cup Tahini</li>
+        <li>💧 1 cup room temperature water</li>
+        <li>🍋 Lemon juice (to taste)</li>
+        <li>🧄 1 garlic clove, minced</li>
+        <li>🧂 Salt & pepper, to taste</li>
+        <li>🌶️ 2 tsp paprika</li>
+        <li>🌿 Dried or fresh herbs (optional)</li>
+    </ul>
+    
+    <hr>
+
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 20px; list-style-type: none;">
+            <li>💡 Adjust the consistency by adding more water for a thinner sauce, or less for a thicker spread.</li>
+            <li>🍴 This sauce pairs wonderfully with grilled meats, roasted vegetables, or pita bread.</li>
+        </ul>
+        <hr>
+
+        <h5><b>Let's Do This:</b></h5>
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Start by mixing the water and tahini (water first, so it doesn’t stick to the bowl!).</li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Add lemon juice, garlic, salt, and pepper.</li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Stir in paprika and herbs. Taste and adjust if needed.</li>
+            <li style="margin-bottom: 20px;"><input type="checkbox"> Perfect for dipping, drizzling, or spreading! 😋</li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Tahini Sauce" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

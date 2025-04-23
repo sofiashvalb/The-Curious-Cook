@@ -1,0 +1,45 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+            Smoked eggplant, fresh toppings, endless flavor. Feta or <a href="{% url 'recipe' card_id=8 %}" alt="tahini" style="text-decoration: none;"><b>Tahini</b></a>? You decide! 
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+    <ul style="padding-left: 20px; list-style-type: none;">
+            <li>🍆 1 whole eggplant</li>
+            <li>🧅 1/2 red onion, finely chopped</li>
+            <li>🌿 Handful of parsley, chopped</li>
+            <li>🧄 1-2 garlic cloves, minced</li>
+            <li>🍋 Lemon juice (a squeeze!)</li>
+            <li>🍅 1 tomato, grated</li>
+            <li>🧂 Salt & pepper (to taste)</li>
+            <li>🥄 Crumbled feta or <a href="{% url 'recipe' card_id=8 %}" alt="tahini" style="text-decoration: none;"><b>Tahini</b></a> drizzle </li>
+    </ul>
+
+    <hr>
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 50px; list-style-type: none;">
+                <li style="margin-bottom: 20px;">💡 Plate not looking perfect? No worries—just mix it into a spread and enjoy the flavors!</li>
+        </ul>
+        <hr>
+    </div>
+
+    <div class="row">
+        <h5><b>Let's Do This:</b></h5>
+            <ul style="padding-left: 50px; list-style-type: none;">
+                <li style="margin-bottom: 20px;"><input type="checkbox"> Preheat oven to the highest setting. Poke eggplant with a fork and broil for 45-60 minutes, until soft and charred. (Or char on the stove for extra smokiness)</li>
+                <li style="margin-bottom: 20px;"><input type="checkbox"> Scoop out eggplant flesh and mash on a plate.</li>
+                <li style="margin-bottom: 20px;"><input type="checkbox"> Top with onions, garlic, parsley, and grated tomato. Add lemon, salt, and pepper.</li>
+                <li style="margin-bottom: 20px;"><input type="checkbox"> Crumble feta or drizzle tahini on top. Enjoy!</li>
+            </ul>
+    </div>
+
+{% endblock %}
+
+{% block image %}
+        <img src="{{ card.image}}" alt="Smoked Eggplant" class="d-inline-block align-text-center" style="max-width: 100%; height: auto;">
+{% endblock %}

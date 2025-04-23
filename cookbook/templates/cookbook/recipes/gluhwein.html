@@ -1,0 +1,50 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+            A festive, spiced masterpiece to celebrate the season! Perfect for cozying up by the fire or toasting with friends and family. Let the holiday celebrations begin! 🎉🎄
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+    <ul style="padding-left: 20px; list-style-type: none;">
+            <li>🍊 1 orange, sliced</li>
+            <li>🍊 Zest of 1 orange</li>
+            <li>🍷 750ml (25.4oz) red wine (your fave!)</li>
+            <li>🥃 30ml (1oz) brandy (optional, but so good!)</li>
+            <li>🧂 3 tbsp (45g) sugar</li>
+            <li>✨ 3 cinnamon sticks</li>
+            <li>⭐ 2-3 star anise</li>
+            <li>🌿 12 cloves</li>
+            <li>🍊 Juice of 1 orange</li>
+    </ul>
+
+    <hr>
+
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 20px; list-style-type: none;">
+                <li>💡 If you're feeling extra festive, add a few cranberries for color and crunch! 🍒</li>
+        </ul>
+        <hr>
+
+        <h5><b>Let’s Do This:</b></h5>
+        <ul style="padding-left: 50px; list-style-type: none;">
+                <li style="margin-bottom: 20px;"><input type="checkbox"> In a pot, add sugar, cinnamon sticks, star anise, and cloves.
+                    <br><small style="color:gray;">3 tbsp (45g) sugar, 3 cinnamon sticks, 2-3 star anise, 12 cloves</small>
+                </li>
+                <li style="margin-bottom: 20px;"><input type="checkbox"> Pour in 3-4 tbsp (45-60ml) of wine and let it melt together over low heat.</li>
+                <li style="margin-bottom: 20px;"><input type="checkbox"> Toss in orange slices, zest, remaining wine, brandy (if using), and fresh orange juice.
+                    <br><small style="color:gray;">1 orange, sliced, zest of 1 orange, 750ml (25.4oz) red wine, 30ml (1oz) brandy (optional), juice of 1 orange</small>
+                </li>
+                <li style="margin-bottom: 20px;"><input type="checkbox"> Let it simmer for 15-20 minutes—smell that holiday magic!</li>
+                <li style="margin-bottom: 20px;"><input type="checkbox"> Pour into mugs, garnish with a cinnamon stick or orange slice, and sip away!</li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Gluhwein (Mulled Wine)" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}
+ 

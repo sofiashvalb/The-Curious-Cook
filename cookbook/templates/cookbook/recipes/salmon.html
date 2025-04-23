@@ -1,0 +1,53 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        I've got to admit, I never expected a fish dish to be so simple and tasty, but this garlic butter salmon is a total game-changer. One bite, and you'll be hooked for good! 
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🐟 Salmon fillet</li>
+        <li>🧂 Salt & pepper (to taste)</li>
+        <li>🌶️ Paprika (or any spices you like—feel free to experiment!)</li>
+        <li>🧈 ~1/4 cup (~50g) butter</li>
+        <li>🧄 2 cloves garlic – Minced</li>
+        <li>🌿 Fresh dill (or any herbs you'd like)</li>
+        <li>🍋 Optional: Lemon juice</li>
+    </ul>
+
+    <hr>
+
+    <h5><b>Tips & Suggestions:</b></h5>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>✨ Remember! Add lemon juice only after cooking to keep the garlic from turning green! 😜</li>
+        <li>✨ The fresher the fish, the better the flavor!</li>
+    </ul>
+    <hr>
+
+    <h5><b>Let's Do This:</b></h5>
+    <ul style="padding-left: 50px; list-style-type: none;">
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> First, preheat your oven to 180°C (350°F) to get it ready for baking.
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> Season the salmon fillet with salt, pepper, and paprika, ensuring it's evenly coated. Then, bake the salmon for 15-20 minutes, or until it's cooked through.
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> While the salmon is baking, melt the butter in the microwave using 30-second pulses. Once melted, add the minced garlic and fresh dill to the butter and mix well.
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> Once the salmon is done baking, pour the garlic butter mixture over the salmon and cook it for an additional 4-5 minutes to infuse the flavors.
+            <br><small style="color:gray;">Make sure you cook the salmon last—it's juiciest right out of the oven!</small>
+        </li>
+    </ul>
+    
+    
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Garlic Butter Salmon" class="d-inline-block align-text-center" style="max-width: 100%; height: auto;">
+{% endblock %}

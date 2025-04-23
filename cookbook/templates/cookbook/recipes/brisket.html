@@ -1,0 +1,60 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        This slow-roasted beef brisket is packed with bold flavors and topped with a zesty <a href="{% url 'recipe' card_id=5 %}" alt="chimichurri" style="text-decoration: none;"><b>Chimichurri</b></a> sauce for the perfect finishing touch. Get ready for tender, juicy slices that are sure to satisfy! 🔥
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍖 2.2 lbs (1 kg) beef brisket</li>
+        <li>🧂 2 tbsp salt</li>
+        <li>🌶️ 3 tbsp ground black pepper</li>
+        <li>🌶️ 2 tbsp paprika</li>
+        <li>🧄 1 tbsp garlic powder</li>
+        <li>🥄 4 tbsp barbecue sauce</li>
+        <li>🍯 4 tbsp honey</li>
+        <li>🥄 2 tbsp mustard</li>
+        <li>🫒 1/2 cup (120ml) olive oil</li>
+        <li>💧 1/2 cup (120ml) water</li>
+        <li>🌿 Feel free to add any other spices or herbs you love!</li>
+    </ul>
+
+    <hr>
+
+    <h5><b>Tips & Suggestions:</b></h5>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🌶️ Spice things up: Add a pinch of cayenne or chili flakes to the brisket rub for an extra kick!</li>
+        <li>🍴 Pair it with roasted veggies or mashed potatoes for a complete meal.</li>
+    </ul>
+    <hr>
+
+    <h5><b>Let's Do This:</b></h5>
+    <ul style="padding-left: 50px; list-style-type: none;">
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> First, combine all the seasonings and sauces. Rub the mixture all over the brisket, cover it, and refrigerate for *<b>24 hours</b>* to let the flavors meld.
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> Preheat your oven to 180°C (350°F), then roast the brisket, <b>covered</b>, for 1 hour to start the cooking process.
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> After 1 hour, lower the oven temperature to 120°C (250°F). Moisten the brisket with its own juices and continue cooking for another 3 hours.
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> Once the brisket has cooked for 4 hours, uncover it and broil at 180°C (350°F) for 15 minutes to achieve a crispy, flavorful top. 🍽️
+        </li>
+        <li style="margin-bottom: 20px;">
+            <input type="checkbox"> Once done, slice the brisket and serve with a <a href="{% url 'recipe' card_id=5 %}" alt="chimichurri" style="text-decoration: none;"><b>Chimichurri</b></a> sauce on the side for extra flavor.
+        </li>
+    </ul>
+    
+    
+    
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Slow-Roasted Beef Brisket" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

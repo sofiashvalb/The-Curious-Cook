@@ -1,0 +1,49 @@
+{% extends "cookbook/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+
+    <h1>{{ user.username|capfirst }}'s Recipe Picks
+        <img class="heart" src="{% static 'cookbook/bookmarkUnsave.jpg' %}" alt="tnx" style="width: 40px !important; height: auto !important; vertical-align: middle !important; margin-left: 5px;">
+    </h1>
+    <hr>
+    
+    {% if message %}
+        <h3 style="margin: 70px; text-align: center; font-family: fantasy, sans-serif; color: rgb(225, 131, 96);">{{ message }}</h3>
+        <img src="{% static 'cookbook/kit1.jpg' %}" alt="pennding" style="display:block; margin: 0 auto; border-radius: 5%;" width="300" height="auto">
+    
+    {% else %}
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+                <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3"> 
+                
+                    {% for card in cards %}
+                        <a href="{% url 'recipe' card_id=card.id %}" class="card-link" style="text-decoration: none;"> 
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-img-wrapper">
+                                        <img src="{{ card.image }}" alt="{{ card.title }}" class="card-img-top" style="object-fit: cover; width: 100%; height: 100%;">
+                                    </div>
+                                    
+                                    <div class="card-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 10px;">
+                                        <h6 style="font-size: 14px; margin: 0;"><b>{{ card.title }}</b></h6>
+                                        <div class="d-flex justify-content-between align-items-center" style="overflow: hidden;">
+                                            <h6 class="text-body-secondary" style="margin-left: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 15px; font-family: fantasy, sans-serif;">
+                                                <b>{{ card.liked.count }}</b>
+                                                <img class="heart" src="{% static 'cookbook/fullHeart.jpg' %}" alt="tnx" 
+                                                    style="max-width: 30px; max-height: 30px; vertical-align: middle; margin-left: 5px;">
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    
+    {% endif %} 
+
+{% endblock %}

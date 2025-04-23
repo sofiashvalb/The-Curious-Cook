@@ -1,0 +1,56 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        When sweet meets savory, magic happens. These roasted sweet potato rounds topped with creamy feta and crunchy pecans are the perfect bite-sized appetizer to wow your guests. 
+    </p>
+
+    <h4><b>Ingredients:</b></h4>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🍠 3 large sweet potatoes</li>
+        <li>🧴 ¼ cup olive oil</li>
+        <li>🍯 ¼ cup maple syrup</li>
+        <li>🧂 Salt and pepper to taste</li>
+        <li>🌶 1 tsp sweet chili powder (dried)</li>
+        <li>🌿 1 tsp dried thyme (or rosemary)</li>
+    </ul>
+
+    <p><b>For the Toppings:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🧀 200g feta cheese, crumbled</li>
+        <li>🥜 100g candied pecans, finely chopped</li>
+        <li>🌱 Fresh chives or green onions, chopped</li>
+    </ul>
+    <hr>
+
+    <div class="row">
+        <h5><b>Tips & Suggestions:</b></h5>
+        <ul style="padding-left: 20px; list-style-type: none;">
+            <li>💡 Switch up the herbs, sweetener, or nuts to your taste—don’t be afraid to improvise!</li>
+        </ul>
+        <hr>
+
+        <h5><b>Let’s Do This:</b></h5>
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Start by cutting the sweet potatoes into 1 cm thick rounds. Arrange them neatly on a parchment-lined baking tray, ensuring they’re spaced evenly for a perfect roast. 
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> In a small bowl, whisk together olive oil, maple syrup, salt, pepper, sweet chili powder, and your choice of herbs. Drizzle the mixture generously over the sweet potato rounds and toss them well to coat evenly with the flavorful sauce. 
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Preheat your oven to 180°C (350°F), then place the sweet potatoes inside to roast for about 25-30 minutes. Keep an eye on them as they cook, ensuring they turn golden brown and become tender to the touch. 
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Once the sweet potatoes are done roasting, remove them from the oven and let them cool slightly. Then, sprinkle crumbled feta cheese, finely chopped candied pecans, and fresh herbs like chives or green onions on top. Serve immediately and enjoy the delicious crunch in every bite! 💫
+            </li>
+        </ul>
+        
+    </div>
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Crispy Sweet Potato Rounds" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}

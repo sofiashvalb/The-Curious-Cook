@@ -1,0 +1,75 @@
+{% extends "cookbook/recipe.html" %}
+
+{% load static %}
+
+{% block left %}
+    <p class="text-body-secondary">
+        No fancy equipment required—just your oven, a little patience, and a dough folding technique to create that perfect airy texture. This focaccia will melt in your mouth!
+    </p>
+
+
+    <h4><b>Ingredients:</b></h4>
+    <p><b>For the Focaccia:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>💧 1 1/3 cups (320g) room temp. water</li>
+        <li>🧑‍🍳 1 tsp (3g) dry yeast</li>
+        <li>🧂 1/2 tsp (10g) salt</li>
+        <li>🫒 1 tbsp (13g) olive oil</li>
+        <li>🌾 2 3/4 cups (400g) focaccia/pizza flour</li>
+    </ul>
+
+    <p><b>Optional Topping:</b></p>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>🧂 Coarse salt to taste</li>
+        <li>🫒 A drizzle of olive oil</li>
+        <li>🌿 Fresh rosemary (optional)</li>
+    </ul>
+
+    <hr>
+    <h5><b>Tips & Suggestions:</b></h5>
+    <ul style="padding-left: 20px; list-style-type: none;">
+        <li>💡 Get creative with the toppings! You can add any ingredients you love—cheese, cherry tomatoes, olives, garlic, or even a sprinkle of herbs. The possibilities are endless!</li>
+        <li>🍞 For extra flavor, drizzle a little more olive oil on top before baking, and don’t be shy with the salt!</li>
+    </ul>
+    <hr>
+
+    <div class="row">
+        <h5><b>Let’s Do This:</b></h5>
+    <!-- Custom spacing between list items in instructions -->
+        <ul style="padding-left: 50px; list-style-type: none;">
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> In a bowl, mix together water, yeast, salt, and olive oil.
+                <br><small style="color:gray;">1 1/3 cups (320g) room temp. water, 1 tsp (3g) dry yeast, 1/2 tsp (10g) salt, 1 tbsp (13g) olive oil</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Gradually add flour and stir until you get a sticky, smooth dough.
+                <br><small style="color:gray;">2 3/4 cups (400g) focaccia/pizza flour</small>
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Cover the bowl with plastic wrap, then drape a towel over it. Set a timer for 30 minutes.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> After 30 minutes, dampen your hands and gently fold the dough from the edges toward the center. Cover and let it rest for another 30 minutes.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Repeat the folding process every 30 minutes for 4 more rounds using damp hands.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Once the dough is ready, grease your pan lightly with olive oil and gently transfer the dough. Let it rise for another 20 minutes.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Press down gently on the dough with your fingers to create dimples and bubbles. Drizzle a bit more olive oil on top and sprinkle with salt.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Preheat the oven to 450°F (230°C) and bake for 25 minutes, or until golden brown.
+            </li>
+            <li style="margin-bottom: 20px;">
+                <input type="checkbox"> Take it out of the oven and let it cool for 10 minutes before slicing and enjoying!
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block image %}
+    <img src="{{ card.image }}" alt="Airy, Soft Focaccia" class="d-inline-block align-text-center" style="max-width: 90%; height: auto;">
+{% endblock %}
